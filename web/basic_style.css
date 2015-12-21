@@ -1,0 +1,40 @@
+/* CSS para todas las planas web */
+/* Definir atributos globales */
+
+body {
+	background-color: black;
+	color: white;
+}
+
+a:hover, a:visited, a {
+	color:white;
+	text-decoration: none;
+}
+
+article, footer, aside {
+    text-align: center;
+}
+
+/* video {
+	width:845px;
+	height:480px;
+} */
+
+
+/* Menu desplegable (?) */
+
+nav {
+	background-color: purple;
+	float:top;
+	padding: 5%;
+	text-align: center;
+    font-size: 300%;
+    padding: 1% 5% 1% 5%;
+    margin: -1% -1% 0% -1%;
+}
+
+nav a {
+    margin: 0% 2.5% 0% 2.5%;
+    background-color: gray;
+    padding: 1% 6% 1% 6%;
+}
