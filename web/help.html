@@ -1,51 +1,61 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+<LINK href="basic_style.css" rel="stylesheet" type="text/css">
+<title>Ayuda</title>
+<meta charset="utf-8">
 
-    <LINK href="basic_style.css" rel="stylesheet" type="text/css">
-    <title>Help</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- Entender HTML5 IE-->
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
 
-</head>
-
+<!-- Navegador principal // añadir lateral¿?-->
 <body>
-
 <header>
     <nav id="menu_principal" class="mP">
-        <a href="game.html">  Game  </a>
-        <a href="help.html">  Help  </a>
-        <a href="contact.html"> Contact</a>
-        <a href="options.html"> Options</a>
+        <a href="game.html">Juego</a>
+        <a href="help.html">Ayuda</a>
+        <a href="contact.html">Contacto</a>
+        <a href="options.html">Opciones</a>
+        <a href="mapa.html">Mapa</a>
+        <a href="ranking.html">Ranking</a>
     </nav>
 </header>
 
-<section>
+<main>
+    <section id="explicacion">
+        <h1>Explicacion del juego</h1>
+        <p>Objetivo: Conseguir hacer tres figuras en raya, siendo valido en horizontal, vertical y diagonal.
+            <br>
+            Tienes un movimiento por turno, siendo que este puede colocarse en cualquier lugar vacio, sin ningun tipo de restricción.
+        </p>
 
-    <article>
-        <header>
-            <h2>Article title</h2>
-        </header>
-        <iframe width="854" height="480" src="https://www.youtube.com/embed/Am4oKAmc2To" frameborder="0" allowfullscreen></iframe>
-        <p>Videotuto del 3rayas en.</p>
-    </article>
 
-    <article>
-        <header>
-            <h2>Controles</h2>
-        </header>
-        <p>pikachu arriba, agumon abajo.</p>
-    </article>
+    </section>
 
-</section>
+    <!--autohide	This parameter indicates whether the video controls will automatically hide after a video begins playing.
+     This parameter has been deprecated for HTML5 players,
+     which display or hide the video progress bar and player controls automatically (autohide=1). -->
+    <iframe width="560" height="315"
+            src="https://www.youtube.com/embed/9rBUImB0E9E?playlist=Oi-2-0PeEmA,AMx7LQNHJCg,EoN_vhZjrjg,I6I8QkGZt-8&amp;autohide=0" allowfullscreen>
+    </iframe>
 
-<aside>
-    <h2>FAQ</h2>
-    <p>Por que no veo nada? Porque estas ciego.</p>
-</aside>
+    <section id="faq">
+    <h1>FAQ</h1>
 
-<footer>
-    <p>Copyright 2015 Guilmon</p>
-</footer>
+    <h3> ¿Es posible ser invencible en el juego? </h3>
+    <p> Si, solo si eres asiático con devoción por el juego.</p>
+
+    <h3> ¿Existe el Korean tic-tac-toe (3 en raya)?</h3>
+    <p> Claramente, y solo se juega en territorio asiático.</p>
+
+    <h3>Dicen que "El Creador" es uno de los mejores players a nivel europeo. ¿Es eso cierto?</h3>
+    <p> Obviamente, se dice que es el tercer jugador legendario.</p>
+
+    </section>
+</main>
+
+<footer> Todos los de derecha reservados. </footer>
 
 </body>
 

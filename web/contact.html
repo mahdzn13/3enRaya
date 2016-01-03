@@ -1,23 +1,77 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+<LINK href="basic_style.css" rel="stylesheet" type="text/css">
+<title>Contacto</title>
+<meta charset="utf-8">
 
-    <LINK href="basic_style.css" rel="stylesheet" type="text/css">
-    <title>Contact</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
 
-</head>
-
+<!-- Navegador principal // añadir lateral¿?-->
 <body>
-
 <header>
     <nav id="menu_principal" class="mP">
-        <a href="game.html">Game</a>
-        <a href="help.html">Help</a>
-        <a href="contact.html">Contact</a>
-        <a href="options.html">Options</a>
+        <a href="game.html">Juego</a>
+        <a href="help.html">Ayuda</a>
+        <a href="contact.html">Contacto</a>
+        <a href="options.html">Opciones</a>
+        <a href="mapa.html">Mapa</a>
+        <a href="ranking.html">Ranking</a>
     </nav>
 </header>
+
+<main>
+    <form action="." method="post">
+        <fieldset>
+            <!-- Contacto basico -->
+            <legend>Contacta con "El creador"</legend>
+            <label for="nombre">Nombre de usuario:</label>
+            <input type="text" name="nombre" id="nombre">
+
+            <label for="mail">E-Mail: </label>
+            <input type="email" name="correo_electronico" id="mail">
+            <br>
+            <label for="descripcion">Motivo de contacto:</label>
+            <br>
+            <textarea name="descripcion" id="descripcion"></textarea>
+            <br>
+            <input type="submit" value="Enviar">
+
+        </fieldset>
+    </form>
+
+
+    <form>
+        <fieldset>
+                <!-- Reporte de mal funcionamiento de la web o bug. -->
+            <legend>Reportar malfuncionamiento o bug</legend>
+            <p>Tipo</p>
+            <select name="tipo">
+                <option value="bug">Bug</option>
+                <option value="malfuncionamiento">Mal funcionamiento</option>
+            </select>
+            <br>
+            <br>
+
+
+            <label for="nombre2">Nombre de usuario:</label>
+            <input type="text" name="nombre" id="nombre2">
+
+            <label for="mail2">E-Mail: </label>
+            <input type="email" name="correo_electronico" id="mail2">
+            <br>
+            <label for="bug">Motivo de contacto:</label>
+            <br>
+            <textarea name="descripcion2" id="bug"></textarea>
+            <br>
+            <input type="submit" value="Enviar">
+
+        </fieldset>
+    </form>
+</main>
+
+<footer> Todos los de derecha reservados. </footer>
 
 </body>
 

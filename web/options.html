@@ -1,23 +1,91 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+<LINK href="basic_style.css" rel="stylesheet" type="text/css">
+<title>Opciones</title>
+<meta charset="utf-8">
 
-    <LINK href="basic_style.css" rel="stylesheet" type="text/css">
-    <title>Options</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- Entender HTML5 IE-->
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
 
-</head>
-
+        <!-- Navegador principal // añadir lateral¿?-->
 <body>
-
 <header>
     <nav id="menu_principal" class="mP">
-        <a href="game.html">Game</a>
-        <a href="help.html">Help</a>
-        <a href="contact.html">Contact</a>
-        <a href="options.html">Options</a>
+        <a href="game.html">Juego</a>
+        <a href="help.html">Ayuda</a>
+        <a href="contact.html">Contacto</a>
+        <a href="options.html">Opciones</a>
+        <a href="mapa.html">Mapa</a>
+        <a href="ranking.html">Ranking</a>
     </nav>
 </header>
+
+<main>
+    <section id="opciones">
+        <h1>Configuración</h1>
+        <form action="." method="post">
+            <fieldset>
+                <!-- Opciones basicas del juego Volumen general y dificultad -->
+                <legend>Opciones basicas</legend>
+                <input type="radio" name="dificultad" value="facil" id="facil">
+                <label for="facil">Fácil</label>
+
+                <input type="radio" name="dificultad" value="medio" id="medio">
+                <label for="medio">Medio</label>
+
+                <input type="radio" name="dificultad" value="dificil" id="dificil">
+                <label for="dificil">Difícil</label>
+
+                <input type="radio" name="dificultad" value="imposible" id="imposible">
+                <label for="imposible">Imposible</label>
+
+                <p>Oponente</p>
+                <input type="radio" name="vs" value="IA" id="ia">
+                <label for="ia">Maquina </label>
+
+                <input type="radio" name="vs" value="player" id="player">
+                <label for="player">Humano </label>
+
+                <p>Volumen maestro:</p>
+                <select name="master">
+                    <option value="full">100% sonido</option>
+                    <option value="mitad">50% sonido</option>
+                    <option value="cuarto">25% sonido</option>
+                    <option value="mute">Sin sonido</option>
+                </select>
+
+            </fieldset>
+
+            <fieldset>
+                <!-- Opciones avanzadas -->
+                <legend>Opciones adicionales</legend>
+                <p>Volumen de efectos:</p>
+                <select name="fx">
+                    <option value="full">100% sonido</option>
+                    <option value="mitad">50% sonido</option>
+                    <option value="cuarto">25% sonido</option>
+                    <option value="mute">Sin sonido</option>
+                </select>
+
+                <p>Volumen de musica:</p>
+                <select name="music">
+                    <option value="full">100% sonido</option>
+                    <option value="mitad">50% sonido</option>
+                    <option value="cuarto">25% sonido</option>
+                    <option value="mute">Sin sonido</option>
+                </select>
+
+            </fieldset>
+
+            <br>
+            <input type="submit" value="Aplicar cambios">
+        </form>
+    </section>
+</main>
+
+<footer> Todos los de derecha reservados. </footer>
 
 </body>
 

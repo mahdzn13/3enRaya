@@ -38,3 +38,9 @@ nav a {
     background-color: gray;
     padding: 1% 6% 1% 6%;
 }
+
+/* Tablas provisionales */
+
+table, td, th, tr {
+    border: 1px solid white;
+}
