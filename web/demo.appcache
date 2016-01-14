@@ -1,0 +1,10 @@
+CACHE MANIFEST
+# 14/01/2016 v0
+/basic_style.css
+/game.html
+
+#Los que requieren interneto
+NETWORK:
+
+#Para escoger archivos alternativos
+FALLBACK:
