@@ -1,6 +1,16 @@
 /* CSS para todas las planas web */
 /* Definir atributos globales */
 
+/* Reset browser default values to 0. Adding responsive options */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+/* Decoration section */
 body {
 	background-color: black;
 	color: white;
@@ -15,32 +25,45 @@ article, footer, aside {
     text-align: center;
 }
 
-/* video {
-	width:845px;
-	height:480px;
-} */
-
-
-/* Menu desplegable (?) */
-
+/* Menu */
 nav {
+    padding-top: 10px;
+    height: 50px;
 	background-color: purple;
-	float:top;
-	padding: 5%;
 	text-align: center;
-    font-size: 300%;
-    padding: 1% 5% 1% 5%;
-    margin: -1% -1% 0% -1%;
-}
-
+	}
 nav a {
-    margin: 0% 2.5% 0% 2.5%;
     background-color: gray;
-    padding: 1% 6% 1% 6%;
+    font-size: 200%;
 }
 
-/* Tablas provisionales */
-
+/* Tables */
 table, td, th, tr {
     border: 1px solid white;
 }
+
+/* Canvas declarations */
+canvas {
+    height: 300px;
+
+}
+
+/* HTML5 compatibility */
+header, section, footer, aside, nav, main, article, figure {
+    display: block;
+}
+
+/* Grid view */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+.clear-fix {clear: both;}
