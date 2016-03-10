@@ -27,14 +27,16 @@ article, footer, aside {
 
 /* Menu */
 nav {
-    padding-top: 10px;
-    height: 50px;
 	background-color: purple;
 	text-align: center;
 	}
 nav a {
     background-color: gray;
-    font-size: 200%;
+    font-size: 150%;
+    border-radius:50px 0px 50px 0px;
+}
+.right {
+   border-radius: 0px 50px 0px 50px;
 }
 
 /* Tables */
@@ -45,7 +47,6 @@ table, td, th, tr {
 /* Canvas declarations */
 canvas {
     height: 300px;
-
 }
 
 /* HTML5 compatibility */
@@ -66,4 +67,37 @@ header, section, footer, aside, nav, main, article, figure {
 .col-10 {width: 83.33%;}
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
-.clear-fix {clear: both;}
+
+/* Col style definition */
+[class*="col-"] {
+    float: left;
+    border: 1px solid yellow;
+}
+
+.row {clear: both;}
+
+/* Responsive mobile-tablet */
+
+@media screen and (max-width:599px) {
+	[class*="col-"] {
+		width: 100%;
+	}
+}
+
+@media screen and (min-width:600px) and (max-width:767px){
+	.col-1,.col-2,.col-3 {
+		width: 25%;
+	}
+	.col-4,.col-5,.col-6{
+		width: 50%;
+	}
+	.col-7,.col-8,.col-9{
+		width: 75%;
+	}
+	.col-10,.col-11,.col-12{
+		width: 100%;
+	}
+	nav a {
+            font-size: 100%;
+        }
+}
