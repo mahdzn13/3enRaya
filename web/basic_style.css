@@ -17,21 +17,21 @@ body {
 }
 
 a:hover, a:visited, a {
-	color:white;
+	color:lime;
 	text-decoration: none;
-}
+ }
 
 article, footer, aside {
     text-align: center;
 }
 
 /* Menu */
-nav {
-	background-color: purple;
+a {
 	text-align: center;
-	}
+	font-family: CheapFire;
+}
 nav a {
-    background-color: gray;
+    background-color: #303030;
     font-size: 150%;
     border-radius:50px 0px 50px 0px;
 }
@@ -82,6 +82,20 @@ header, section, footer, aside, nav, main, article, figure {
 	[class*="col-"] {
 		width: 100%;
 	}
+
+	/* Menu modifications */
+	nav a {
+        border-radius: 0px 0px 0px 0px;
+    }
+    .right {
+        border-radius: 0px 0px 0px 0px;
+    }
+    .gmb {
+        border-radius: 100px 100px 0px 0px;
+    }
+    .rmb {
+        border-radius: 0px 0px 100px 100px;
+    }
 }
 
 @media screen and (min-width:600px) and (max-width:767px){
@@ -97,7 +111,43 @@ header, section, footer, aside, nav, main, article, figure {
 	.col-10,.col-11,.col-12{
 		width: 100%;
 	}
-	nav a {
-            font-size: 100%;
-        }
+	/* Menu Styling */
+    .move {
+        width: 50%;
+    }
+    .top{
+        border-radius: 0px 0px 100px 100px;
+    }
+    .bot{
+        border-radius: 100px 100px 0px 0px;
+    }
+    .topr {
+        border-radius: 0px 100px 0px 100px;
+    }
+    .rmb{
+        border-radius: 100px 0px 100px 0px;
+    }
+}
+
+/* Fonts */
+@font-face {
+    font-family: CheapFire;
+    src: url(fonts/chp-fire.ttf);
+}
+@font-face {
+    font-family: Mecha;
+    src: url(fonts/Mecha.ttf);
+}
+@font-face {
+    font-family: MechaB;
+    src: url(fonts/Mecha_Bold.ttf);
+    font-weight: bold;
+}
+@font-face {
+    font-family: Start;
+    src: url(fonts/PressStart2P.ttf);
+}
+@font-face {
+    font-family: Orion;
+    src: url(fonts/OrionPax.ttf);
 }
