@@ -22,8 +22,8 @@
     </nav>
 </header>
 
-<main>
-    <form action="." method="post">
+<main class="row">
+    <form action="." method="post" class="col-6">
         <fieldset>
             <!-- Contacto basico -->
             <legend>Contacta con "El creador"</legend>
@@ -32,28 +32,29 @@
 
             <label for="mail">E-Mail: </label>
             <input type="email" name="correo_electronico" id="mail">
-            <br>
+
             <label for="descripcion">Motivo de contacto:</label>
-            <br>
-            <textarea name="descripcion" id="descripcion"></textarea>
-            <br>
-            <input type="submit" value="Enviar">
+
+            <textarea rows="4" cols="50" name="descripcion" id="descripcion"></textarea>
+
+            <input type="submit" value="Enviar" class="submit">
 
         </fieldset>
     </form>
 
 
-    <form  action="." method="post">
+    <form  action="." method="post" class="col-6">
         <fieldset>
                 <!-- Reporte de mal funcionamiento de la web o bug. -->
             <legend>Reportar malfuncionamiento o bug</legend>
-            <p>Tipo</p>
-            <select name="tipo">
+            <!--<p>Tipo</p>-->
+            <label for="type">Tipo</label>
+            <select name="tipo" id="type">
                 <option value="bug">Bug</option>
                 <option value="malfuncionamiento">Mal funcionamiento</option>
             </select>
-            <br>
-            <br>
+
+
 
 
             <label for="nombre2">Nombre de usuario:</label>
@@ -61,18 +62,18 @@
 
             <label for="mail2">E-Mail: </label>
             <input type="email" name="correo_electronico" id="mail2">
-            <br>
+
             <label for="bug">Motivo de contacto:</label>
-            <br>
-            <textarea name="descripcion2" id="bug"></textarea>
-            <br>
-            <input type="submit" value="Enviar">
+
+            <textarea name="descripcion2" id="bug" rows="4" cols="50"></textarea>
+
+            <input type="submit" value="Enviar" class="submit">
 
         </fieldset>
     </form>
 </main>
 
-<footer> Todos los de derecha reservados. </footer>
+<footer class="col-12 row"> Todos los de derecha reservados. </footer>
 
 </body>
 

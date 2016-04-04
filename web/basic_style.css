@@ -10,17 +10,35 @@
     -moz-box-sizing: border-box;
 }
 
+/* frames */
+iframe{
+    border:0px !important;
+    height:400px;
+}
+
+
 /* Decoration section */
+p {
+    color:#f1c40f;
+    margin-bottom:5px;
+}
+h3 {
+    color:#f39c12;
+    margin-top:10px;
+}
 body {
-	background-color: black;
+	background-image: url(resources/background.jpg);
 	color: white;
 }
 
 a:hover, a:visited, a {
-	color:lime;
+	color: #e74c3c;
 	text-decoration: none;
- }
-
+}
+footer{
+    color:#95a5a6;
+    border:0px !important;
+}
 article, footer, aside {
     text-align: center;
 }
@@ -41,12 +59,58 @@ nav a {
 
 /* Tables */
 table, td, th, tr {
-    border: 1px solid white;
+    border: 1px solid #2980b9;
+    text-align:center;
+    border-collapse: collapse;
+}
+td {
+    color: #f1c40f;
+}
+th{
+    color: #c0392b;
+}
+h1 {
+    margin-top:5px;
+    color: #d35400;
+    text-align: center;
+}
+
+/* Forms */
+fieldset{
+    color: #f1c40f;
+}
+#ia{
+    margin-top:20px;
+}
+#player,#facil,#medio,#dificil,#imposible{
+    margin-top:3px;
+}
+fieldset {
+    text-align:center;
+    border:0px;
+    padding-top:5px;
+    min-height:210px;
+}
+form p {text-align:center;}
+label,form p {
+    float: left;
+    clear: left;
+    margin-left:5px;
+    margin-bottom:5px;
+}
+input,select,textarea {
+    float: right;
+    clear: right;
+    margin-right:5px;
+    margin-bottom:5px;
 }
 
 /* Canvas declarations */
 canvas {
     height: 300px;
+    background-image:url(resources/canvas.png);
+    background-repeat: no-repeat;
+    background-position:center;
 }
 
 /* HTML5 compatibility */
@@ -71,7 +135,7 @@ header, section, footer, aside, nav, main, article, figure {
 /* Col style definition */
 [class*="col-"] {
     float: left;
-    border: 1px solid yellow;
+    border: 1px solid #3498db;
 }
 
 .row {clear: both;}
@@ -84,6 +148,7 @@ header, section, footer, aside, nav, main, article, figure {
 	}
 
 	/* Menu modifications */
+
 	nav a {
         border-radius: 0px 0px 0px 0px;
     }
@@ -96,6 +161,17 @@ header, section, footer, aside, nav, main, article, figure {
     .rmb {
         border-radius: 0px 0px 100px 100px;
     }
+     /* form */
+     input,select,textarea {
+         width:100px;
+         height:20px;
+     }
+
+     /* tables */
+     /*.hide{
+        display:none;
+     }*/
+
 }
 
 @media screen and (min-width:600px) and (max-width:767px){
@@ -127,6 +203,15 @@ header, section, footer, aside, nav, main, article, figure {
     .rmb{
         border-radius: 100px 0px 100px 0px;
     }
+
+    /* form */
+    input,select,textarea {
+        width:150px;
+        height:20px;
+    }
+
+    /* tables */
+    td,th,table { width:5%; }
 }
 
 /* Fonts */
@@ -151,3 +236,6 @@ header, section, footer, aside, nav, main, article, figure {
     font-family: Orion;
     src: url(fonts/OrionPax.ttf);
 }
+
+
+
