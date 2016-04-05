@@ -6,8 +6,10 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    /* Comentados por errores del validador de w3
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
+    */
 }
 
 /* frames */
@@ -26,9 +28,17 @@ h3 {
     color:#f39c12;
     margin-top:10px;
 }
+main,form,body {
+    background: linear-gradient(#000,#1c1e20);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 body {
-	background-image: url(resources/background.jpg);
+	/*background-image: url(resources/background.jpg);*/
 	color: white;
+	float:none !important;
+	margin:auto;
+    border:0 !important;
 }
 
 a:hover, a:visited, a {
@@ -39,8 +49,11 @@ footer{
     color:#95a5a6;
     border:0px !important;
 }
-article, footer, aside {
+article, footer, aside{
     text-align: center;
+}
+align {
+
 }
 
 /* Menu */
@@ -237,5 +250,23 @@ header, section, footer, aside, nav, main, article, figure {
     src: url(fonts/OrionPax.ttf);
 }
 
+/* Animations,transitions,transformations */
+nav a{
+    transition: width 0.5s, height 0.5s, transform 0.5s;
+}
+nav a:hover {
+    transform: rotate(180deg);
+    border-color:orange;
+}
+nav p {
+    transition: width 0.5s, height 0.5s, transform 0.5s;
+    color: #e74c3c;
+}
+nav p:hover {
+    transform: rotate(-180deg);
+}
 
-
+form:hover, td:hover, tr:hover, section:hover, fieldset:hover {
+    transition: width 0.5s, height 0.5s, transform 0.5s;
+    border-color:orange;
+}

@@ -10,15 +10,15 @@
 <![endif]-->
 
 <!-- Navegador principal // añadir lateral¿?-->
-<body>
+<body class="col-10">
 <header class="row">
     <nav id="menu_principal">
-        <a href="help.html" class="col-2 gmb">Ayuda</a>
-        <a href="game.html" class="col-2 move top">Juega</a>
-        <a href="contact.html" class="col-2 topr">Contacto</a>
-        <a href="options.html" class="col-2 right">Opciones</a>
-        <a href="ranking.html" class="col-2 right move bot">Ranking</a>
-        <a href="mapa.html" class="col-2 right rmb">Mapa</a>
+        <a href="help.html" class="col-2 gmb"><p>Ayuda</p></a>
+        <a href="game.html" class="col-2 move top"><p>Juega</p></a>
+        <a href="contact.html" class="col-2 topr"><p>Contacto</p></a>
+        <a href="options.html" class="col-2 right"><p>Opciones</p></a>
+        <a href="ranking.html" class="col-2 right move bot"><p>Ranking</p></a>
+        <a href="mapa.html" class="col-2 right rmb"><p>Mapa</p></a>
     </nav>
 </header>
 
@@ -28,14 +28,13 @@
             <!-- Contacto basico -->
             <legend>Contacta con "El creador"</legend>
             <label for="nombre">Nombre de usuario:</label>
-            <input type="text" name="nombre" id="nombre">
+            <input type="text" name="nombre" id="nombre" placeholder="Nombre">
 
             <label for="mail">E-Mail: </label>
-            <input type="email" name="correo_electronico" id="mail">
+            <input type="email" name="correo_electronico" id="mail" placeholder="mail@dominio.com">
 
             <label for="descripcion">Motivo de contacto:</label>
-
-            <textarea rows="4" cols="50" name="descripcion" id="descripcion"></textarea>
+            <textarea rows="4" cols="50" name="descripcion" id="descripcion" placeholder="Descripción del motivo..."></textarea>
 
             <input type="submit" value="Enviar" class="submit">
 
@@ -54,18 +53,15 @@
                 <option value="malfuncionamiento">Mal funcionamiento</option>
             </select>
 
-
-
-
             <label for="nombre2">Nombre de usuario:</label>
-            <input type="text" name="nombre" id="nombre2">
+            <input type="text" name="nombre" id="nombre2" placeholder="Nombre">
 
             <label for="mail2">E-Mail: </label>
-            <input type="email" name="correo_electronico" id="mail2">
+            <input type="email" name="correo_electronico" id="mail2" placeholder="mail@dominio.com">
 
             <label for="bug">Motivo de contacto:</label>
 
-            <textarea name="descripcion2" id="bug" rows="4" cols="50"></textarea>
+            <textarea name="descripcion2" id="bug" rows="4" cols="50"  placeholder="Descripción del bug..."></textarea>
 
             <input type="submit" value="Enviar" class="submit">
 
