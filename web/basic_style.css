@@ -6,18 +6,9 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    /* Comentados por errores del validador de w3
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    */
 }
-
-/* frames */
-iframe{
-    border:0px !important;
-    height:400px;
-}
-
 
 /* Decoration section */
 p {
@@ -89,9 +80,6 @@ h1 {
 }
 
 /* Forms */
-fieldset{
-    color: #f1c40f;
-}
 #ia{
     margin-top:20px;
 }
@@ -100,9 +88,10 @@ fieldset{
 }
 fieldset {
     text-align:center;
-    border:0px;
+    border:0px !important;
     padding-top:5px;
     min-height:210px;
+    color: #f1c40f;
 }
 form p {text-align:center;}
 label,form p {
@@ -269,4 +258,10 @@ nav p:hover {
 form:hover, td:hover, tr:hover, section:hover, fieldset:hover {
     transition: width 0.5s, height 0.5s, transform 0.5s;
     border-color:orange;
+}
+
+/* frames */
+iframe {
+    border:0px;
+    height:400px;
 }
