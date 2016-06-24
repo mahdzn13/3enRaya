@@ -28,15 +28,15 @@
             <!-- Contacto basico -->
             <legend>Contacta con "El creador"</legend>
             <label for="nombre">Nombre de usuario:</label>
-            <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+            <input class="textArea col-12" type="text" name="nombre" id="nombre" placeholder="Nombre">
 
             <label for="mail">E-Mail: </label>
-            <input type="email" name="correo_electronico" id="mail" placeholder="mail@dominio.com">
+            <input class="textArea col-12" type="email" name="correo_electronico" id="mail" placeholder="mail@dominio.com">
 
             <label for="descripcion">Motivo de contacto:</label>
-            <textarea rows="4" cols="50" name="descripcion" id="descripcion" placeholder="Descripción del motivo..."></textarea>
+            <textarea class="textArea col-12" rows="4" cols="50" name="descripcion" id="descripcion" placeholder="Descripción del motivo..."></textarea>
 
-            <input type="submit" value="Enviar" class="submit">
+            <input class="button col-12 submit" type="submit" value="Enviar">
 
         </fieldset>
     </form>
@@ -46,24 +46,24 @@
         <fieldset>
                 <!-- Reporte de mal funcionamiento de la web o bug. -->
             <legend>Reportar malfuncionamiento o bug</legend>
-            <!--<p>Tipo</p>-->
+
             <label for="type">Tipo</label>
-            <select name="tipo" id="type">
+            <select class="textArea col-12" name="tipo" id="type">
                 <option value="bug">Bug</option>
                 <option value="malfuncionamiento">Mal funcionamiento</option>
             </select>
 
             <label for="nombre2">Nombre de usuario:</label>
-            <input type="text" name="nombre" id="nombre2" placeholder="Nombre">
+            <input class="textArea col-12" type="text" name="nombre" id="nombre2" placeholder="Nombre">
 
             <label for="mail2">E-Mail: </label>
-            <input type="email" name="correo_electronico" id="mail2" placeholder="mail@dominio.com">
+            <input class="textArea col-12" type="email" name="correo_electronico" id="mail2" placeholder="mail@dominio.com">
 
             <label for="bug">Motivo de contacto:</label>
 
-            <textarea name="descripcion2" id="bug" rows="4" cols="50"  placeholder="Descripción del bug..."></textarea>
+            <textarea class="textArea col-12" name="descripcion2" id="bug" rows="4" cols="50"  placeholder="Descripción del bug..."></textarea>
 
-            <input type="submit" value="Enviar" class="submit">
+            <input class="button col-12 submit" type="submit" value="Enviar">
 
         </fieldset>
     </form>

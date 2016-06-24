@@ -19,6 +19,26 @@
 }
 
 /* Decoration section */
+.textArea{
+    background-color: #303030;
+    font-family: CheapFire;
+    color: lightgray
+
+}
+.button {
+    background-color: #303030;
+    color: #e74c3c;
+
+    font-family: CheapFire;
+    text-align: center;
+    text-decoration: none;
+    border-radius:100px 0px 100px 0px;
+    display: inline-block;
+    font-size: 30px;
+}
+.button:hover{
+     border-color:orange;
+}
 p {
     color:#f1c40f;
     margin-bottom:5px;
@@ -33,7 +53,6 @@ main,form,body {
     background-attachment: fixed;
 }
 body {
-	/*background-image: url(resources/background.jpg);*/
 	color: white;
 	float:none !important;
 	margin:auto;

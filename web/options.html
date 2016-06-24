@@ -31,7 +31,6 @@
                 <!-- Opciones basicas del juego Volumen general y dificultad -->
                 <legend>Opciones basicas</legend>
 
-
                 <p class="align">Oponente</p>
                 <input type="radio" name="vs" value="IA" id="ia">
                 <label for="ia">Maquina </label>
@@ -45,7 +44,7 @@
                 <!-- Opciones avanzadas -->
                 <legend>Opciones adicionales</legend>
                 <p>Color circulo:</p>
-                <select name="fx" id="colorO">
+                <select class="textArea col-12" name="fx" id="colorO">
                     <option value="red">Red</option>
                     <option value="blue">Blue</option>
                     <option value="green">Green</option>
@@ -53,17 +52,21 @@
                 </select>
 
                 <p>Color equis:</p>
-                <select name="music" id="colorX">
+                <select class="textArea col-12" name="music" id="colorX">
                     <option value="red">Red</option>
                     <option value="blue">Blue</option>
                     <option value="green">Green</option>
                     <option value="#3498db">Default</option>
                 </select>
+                <label for="p1Name">Nombre jugador1:</label>
+                <input class="textArea col-12" type="text" name="nombre" id="p1Name" placeholder="Nombre player1">
+                <label for="p2Name">Nombre jugador2:</label>
+                <input class="textArea col-12" type="text" name="nombre" id="p2Name" placeholder="Nombre player2">
 
             </fieldset>
 
             <br>
-            <input type="submit" value="Aplicar cambios" onClick="config()">
+            <input class="button col-12" type="submit" value="Aplicar cambios" onClick="config()">
         </form>
     </section>
 </main>

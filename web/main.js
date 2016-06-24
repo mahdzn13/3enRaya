@@ -1,4 +1,4 @@
-/* Google map */
+/*----- Google map -----*/
 function initMap() {
   navigator.geolocation.getCurrentPosition(function(p){
     /* Deshabilitar preloader*/
@@ -23,18 +23,27 @@ initMap();
 
 
 
-/* First time cfg*/
- if (localStorage.getItem("colorO") === null && localStorage.getItem("colorX") === null){
-        localStorage.setItem("colorO","#e74c3c");
-        localStorage.setItem("colorX","#3498db");
- }
- if (localStorage.getItem("colorO") === null && localStorage.getItem("colorX") === null){
-        localStorage.setItem("colorO","#e74c3c");
-        localStorage.setItem("colorX","#3498db");
- }
-
-/* Configs */
+/*----- First time cfg-----*/
+if (localStorage.getItem("colorO") === null && localStorage.getItem("colorX") === null){
+    localStorage.setItem("colorO","#e74c3c");
+    localStorage.setItem("colorX","#3498db");
+}
+if (localStorage.getItem("isIA") === null){
+    localStorage.setItem("isIA", false);
+}
+if (localStorage.getItem("p1Name") === null && localStorage.getItem("p2Name") === null){
+    localStorage.setItem("p1Name","Aprendiz del 'Maestro'");
+    localStorage.setItem("p2Name","John Cena");
+}
+/*----- Configs -----*/
 function config(){
+     //Player names
+     var p1 = document.getElementById("p1Name").value;
+     var p2 = document.getElementById("p2Name").value;
+     if (p1 === ""){localStorage.setItem("p1Name","Aprendiz del 'Maestro'");} else{localStorage.setItem("p1Name",p1);}
+     if (p2 === ""){ localStorage.setItem("p2Name","John Cena");} else{localStorage.setItem("p2Name",p2);}
+
+
     //IA or player
     var ia = document.getElementById("ia").checked;
     var player = document.getElementById("player").checked;
@@ -66,7 +75,7 @@ function config(){
 
 
 
-/* JUEGO CANVAS */
+/*----- JUEGO CANVAS -----*/
 var canvas = document.getElementById("canvas");
 var c = canvas.getContext("2d");
 c.canvas.width  = window.innerWidth*0.82;
@@ -76,37 +85,23 @@ var click = canvas.getBoundingClientRect();
 var lado = canvas.width;
 var cuadro = lado/3;
 
-function reinicia(){
-move = 0;
-c.lineWidth=1;
-//Players
-player1=true; //X
-player2=false; //O
 
-
-
-//Variables ga�an S.L.
-celda1 = [false,'N'];
-celda2 = [false,'N'];
-celda3 = [false,'N'];
-celda4 = [false,'N'];
-celda5 = [false,'N'];
-celda6 = [false,'N'];
-celda7 = [false,'N'];
-celda8 = [false,'N'];
-celda9 = [false,'N'];
-
-//Turno
-turn = turno();
-
-//Tablero
-tablero();
-}
 
 //Players
 var player1=true; //X
 var player2=false; //O
-
+var p1Name = localStorage.getItem("p1Name");
+var p2Name = localStorage.getItem("p2Name");
+//Score
+var p1Score = 0;
+var p2Score = 0;
+//Reset de victorias
+function resetCounter(){
+    p1Score = 0;
+    p2Score = 0;
+    reiniciaWaiter();
+    alert("Reiniciado con exito!")
+}
 //IA definition
 var player2IsIA = (localStorage.getItem("isIA") === 'true');
 console.log(player2IsIA)
@@ -133,6 +128,7 @@ tablero();
 
 function tablero(){
 	c.strokeStyle="#3498db";
+	c.fillStyle="black";
 	var x = 0;
 	var y = 0;
 	
@@ -179,7 +175,7 @@ function dibujarO(x,y){
 	c.arc(x,y,cuadro/2.2,0,Math.PI*2);
 	c.stroke();
 }
-
+//Cambio de turno
 function turno(){
 	if (player1 === true){
 		player1 = false;
@@ -316,7 +312,7 @@ canvas.addEventListener("click", function(e){
 			turn = turno();
 		}
 	}
-	
+	//Si la IA esta en partida
 	if (turn === false && player2IsIA === true){
 		if (victoria() !== true){
 			iaPlay();
@@ -326,17 +322,62 @@ canvas.addEventListener("click", function(e){
 	move++;
 	victoria();
 })
+function reiniciaWaiter(){
+    setTimeout(function reinicia(){
+               move = 0;
+               c.lineWidth=1;
+               //Players
+               player1=true; //X
+               player2=false; //O
+
+
+
+               //Variables ganyan S.L.
+               celda1 = [false,'N'];
+               celda2 = [false,'N'];
+               celda3 = [false,'N'];
+               celda4 = [false,'N'];
+               celda5 = [false,'N'];
+               celda6 = [false,'N'];
+               celda7 = [false,'N'];
+               celda8 = [false,'N'];
+               celda9 = [false,'N'];
+
+               //Turno
+               turn = turno();
+
+               //Tablero
+               tablero();
+               },1500);
+}
+function winName(name){
+    c.font=(cuadro/4)+"px CheapFire";
+    // Create gradient
+    var gradient=c.createLinearGradient(0,0,canvas.width,0);
+    gradient.addColorStop("0","#AAA");
+    gradient.addColorStop("0.5","orange");
+    gradient.addColorStop("1.0","red");
+    // Fill with gradient
+    c.fillStyle=gradient;
+    c.fillText(name+" wins",cuadro*0.5,cuadro*1.5);
+    c.fillText(p1Score + "-" + p2Score,cuadro*1.4,cuadro*2);
+}
+
 function victoria(){
 		
 		//123
 		if (celda1[1] === 'X' && celda2[1] === 'X' && celda3[1] === 'X') {
-			alert("PLAYER 1 WINS");
-			reinicia();
+		    p1Score++;
+			winName(localStorage.getItem("p1Name")+"(X)");
+
+			reiniciaWaiter();
 			return true;
 		} else if (celda1[1] === 'O' && celda2[1] === 'O' && celda3[1] === 'O'){
-			alert("PLAYER 2 WINS");
-			reinicia();
-			return true;
+			p2Score++;
+			winName(localStorage.getItem("p2Name")+"(O)");
+
+            reiniciaWaiter();
+            return true;
 		} else
 		//456
 		if (celda4[1] === 'X' && celda5[1] === 'X' && celda6[1] === 'X') {
