@@ -10,6 +10,14 @@
     -moz-box-sizing: border-box;
 }
 
+/* GOOGLE MAPS*/
+#map{
+  height: 100%;
+}
+#mapa{
+  height:500px;
+}
+
 /* Decoration section */
 p {
     color:#f1c40f;
@@ -109,11 +117,13 @@ input,select,textarea {
 
 /* Canvas declarations */
 canvas {
-    height: 300px;
-    background-image:url(resources/canvas.png);
-    background-repeat: no-repeat;
-    background-position:center;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
+
 
 /* HTML5 compatibility */
 header, section, footer, aside, nav, main, article, figure {

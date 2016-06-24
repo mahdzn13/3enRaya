@@ -4,7 +4,14 @@
 <title>Mapa</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- //for-mobile-apps -->
+<link href='//fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 
 <!-- Entender HTML5 IE-->
 <!--[if lt IE 9]>
@@ -27,7 +34,13 @@
 <main class="col-12">
     <!-- Google Maps -->
     <p>Conozca nuestra ubicación: </p>
-    <iframe class="col-12" src="https://www.google.com/maps/embed?pb=!1m0!3m2!1ses!2ses!4v1451757905003!6m8!1m7!1sJwEt0WPpO1ODu-HooNXD3A!2m2!1d39.60119076528868!2d2.68939184814246!3f223.69454289879238!4f-14.49991503452226!5f0.7820865974627469" allowfullscreen></iframe>
+
+    <div id="mapa" class="col-12">
+        <div id="map">
+            <script src="main.js"></script>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABBVcpz5nvK0vP-SKSpx6Ktgnyd86quq8&callback=initMap" async defer></script>
+        </div>
+    </div>
 </main>
 
 <footer class="col-12 row"> Todos los de derecha reservados. </footer>

@@ -26,21 +26,11 @@
 <main>
     <section id="opciones">
         <h1>Configuración</h1>
-        <form action="." method="post" class="col-12 row">
+        <form action="game.html" method="post" class="col-12 row">
             <fieldset class="col-6">
                 <!-- Opciones basicas del juego Volumen general y dificultad -->
                 <legend>Opciones basicas</legend>
-                <input type="radio" name="dificultad" value="facil" id="facil">
-                <label for="facil">Fácil</label>
 
-                <input type="radio" name="dificultad" value="medio" id="medio">
-                <label for="medio">Medio</label>
-
-                <input type="radio" name="dificultad" value="dificil" id="dificil">
-                <label for="dificil">Difícil</label>
-
-                <input type="radio" name="dificultad" value="imposible" id="imposible">
-                <label for="imposible">Imposible</label>
 
                 <p class="align">Oponente</p>
                 <input type="radio" name="vs" value="IA" id="ia">
@@ -49,39 +39,31 @@
                 <input type="radio" name="vs" value="player" id="player">
                 <label for="player">Humano </label>
 
-                <p>Volumen maestro:</p>
-                <select name="master">
-                    <option value="full">100% sonido</option>
-                    <option value="mitad">50% sonido</option>
-                    <option value="cuarto">25% sonido</option>
-                    <option value="mute">Sin sonido</option>
-                </select>
-
             </fieldset>
 
             <fieldset class="col-6">
                 <!-- Opciones avanzadas -->
                 <legend>Opciones adicionales</legend>
-                <p>Volumen de efectos:</p>
-                <select name="fx">
-                    <option value="full">100% sonido</option>
-                    <option value="mitad">50% sonido</option>
-                    <option value="cuarto">25% sonido</option>
-                    <option value="mute">Sin sonido</option>
+                <p>Color circulo:</p>
+                <select name="fx" id="colorO">
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                    <option value="#e74c3c">Default</option>
                 </select>
 
-                <p>Volumen de musica:</p>
-                <select name="music">
-                    <option value="full">100% sonido</option>
-                    <option value="mitad">50% sonido</option>
-                    <option value="cuarto">25% sonido</option>
-                    <option value="mute">Sin sonido</option>
+                <p>Color equis:</p>
+                <select name="music" id="colorX">
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                    <option value="#3498db">Default</option>
                 </select>
 
             </fieldset>
 
             <br>
-            <input type="submit" value="Aplicar cambios">
+            <input type="submit" value="Aplicar cambios" onClick="config()">
         </form>
     </section>
 </main>
@@ -89,5 +71,6 @@
 <footer class="col-12 row"> Todos los de derecha reservados. </footer>
 
 </body>
+<script  type='text/javascript' src='main.js'></script>
 
 </html>
