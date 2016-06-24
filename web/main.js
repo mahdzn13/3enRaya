@@ -322,6 +322,8 @@ canvas.addEventListener("click", function(e){
 	move++;
 	victoria();
 })
+
+/*----- DECISION DE LA PARTIDA -----*/
 function reiniciaWaiter(){
     setTimeout(function reinicia(){
                move = 0;
@@ -362,97 +364,101 @@ function winName(name){
     c.fillText(name+" wins",cuadro*0.5,cuadro*1.5);
     c.fillText(p1Score + "-" + p2Score,cuadro*1.4,cuadro*2);
 }
-
+//A realizar cuando gana X
+function winX(){
+    p1Score++;
+    winName(localStorage.getItem("p1Name")+"(X)");
+    reiniciaWaiter();
+}
+//A realizar cuando gana O
+function winO(){
+    p2Score++;
+    winName(localStorage.getItem("p2Name")+"(O)");
+    reiniciaWaiter();
+}
+//A realizar cuando empate
+function tie(){
+     c.font=(cuadro/4)+"px CheapFire";
+        // Create gradient
+        var gradient=c.createLinearGradient(0,0,canvas.width,0);
+        gradient.addColorStop("0","#AAA");
+        gradient.addColorStop("0.5","orange");
+        gradient.addColorStop("1.0","red");
+        // Fill with gradient
+        c.fillStyle=gradient;
+        c.fillText("Tic, Tac, TIE!",cuadro*0.5,cuadro*1.5);
+        c.fillText(p1Score + "-" + p2Score,cuadro*1.4,cuadro*2);
+    reiniciaWaiter();
+}
 function victoria(){
 		
 		//123
 		if (celda1[1] === 'X' && celda2[1] === 'X' && celda3[1] === 'X') {
-		    p1Score++;
-			winName(localStorage.getItem("p1Name")+"(X)");
-
-			reiniciaWaiter();
+		    winX();
 			return true;
 		} else if (celda1[1] === 'O' && celda2[1] === 'O' && celda3[1] === 'O'){
-			p2Score++;
-			winName(localStorage.getItem("p2Name")+"(O)");
-
-            reiniciaWaiter();
+			winO();
             return true;
 		} else
 		//456
 		if (celda4[1] === 'X' && celda5[1] === 'X' && celda6[1] === 'X') {
-			alert("PLAYER 1 WINS");
-			reinicia();
+			  winX();
 			return true;
 		} else if (celda4[1] === 'O' && celda5[1] === 'O' && celda6[1] === 'O'){
-			alert("PLAYER 2 WINS");
-			reinicia();
+			winO();
 			return true;
 		} else
 		//789
 		if (celda7[1] === 'X' && celda8[1] === 'X' && celda9[1] === 'X') {
-			alert("PLAYER 1 WINS");
-			reinicia();
+			  winX();
 			return true;
 		} else if (celda7[1] === 'O' && celda8[1] === 'O' && celda9[1] === 'O'){
-			alert("PLAYER 2 WINS");
-			reinicia();
+			winO();
 			return true;
 		} else
 		//147
 		if (celda1[1] === 'X' && celda4[1] === 'X' && celda7[1] === 'X') {
-			alert("PLAYER 1 WINS");
-			reinicia();
+			  winX();
 			return true;
 		} else if (celda1[1] === 'O' && celda4[1] === 'O' && celda7[1] === 'O'){
-			alert("PLAYER 2 WINS");
-			reinicia();
+			winO();
 			return true;
 		} else
 		//258
 		if (celda2[1] === 'X' && celda5[1] === 'X' && celda8[1] === 'X') {
-			alert("PLAYER 1 WINS");
-			reinicia();
+			  winX();
 			return true;
 		} else if (celda2[1] === 'O' && celda5[1] === 'O' && celda8[1] === 'O'){
-			alert("PLAYER 2 WINS");
-			reinicia();
+			winO();
 			return true;
 		} else
 		//369
 		if (celda3[1] === 'X' && celda6[1] === 'X' && celda9[1] === 'X') {
-			alert("PLAYER 1 WINS");
-			reinicia();
+			  winX();
 			return true;
 		} else if(celda3[1] === 'O' && celda6[1] === 'O' && celda9[1] === 'O'){
-			alert("PLAYER 2 WINS");
-			reinicia();
+			winO();
 			return true;
 		} else
 		//159
 		if (celda1[1] === 'X' && celda5[1] === 'X' && celda9[1] === 'X') {
-			alert("PLAYER 1 WINS");
-			reinicia();
+			winX();
 			return true;
 		} else if (celda1[1] === 'O' && celda5[1] === 'O' && celda9[1] === 'O'){
-			alert("PLAYER 2 WINS");
-			reinicia();
+			winO();
 			return true;
 		} else
 		//357
 		if (celda3[1] === 'X' && celda5[1] === 'X' && celda7[1] === 'X') {
-			alert("PLAYER 1 WINS");
-			reinicia();
+			  winX();
 			return true;
 		} else if (celda3[1] === 'O' && celda5[1] === 'O' && celda7[1] === 'O'){
-			alert("PLAYER 2 WINS");
-			reinicia();
+			winO();
 			return true;
 		} else
 		//TIE
 		if (celda1[1] !== 'N' &&celda2[1] !== 'N' &&celda3[1] !== 'N' &&celda4[1] !== 'N' &&celda5[1] !== 'N' &&celda6[1] !== 'N' &&celda7[1] !== 'N' &&celda8[1] !== 'N' && celda9[1] !== 'N'){
-			alert("Tic Tac TIE MOTHERFUCKERS!");
-			reinicia();
+			tie();
 			return true;
 		}
 }
