@@ -79,7 +79,7 @@ function config(){
 var canvas = document.getElementById("canvas");
 var c = canvas.getContext("2d");
 c.canvas.width  = window.innerWidth*0.82;
-c.canvas.height = window.innerWidth*0.82;
+c.canvas.height = window.innerHeight*0.82;
 var click = canvas.getBoundingClientRect();
 
 var lado = canvas.width;
@@ -320,7 +320,9 @@ canvas.addEventListener("click", function(e){
 		}
 	}
 	move++;
-	victoria();
+	if (player2IsIA === false){
+	    victoria()
+	}
 })
 
 /*----- DECISION DE LA PARTIDA -----*/
@@ -402,7 +404,7 @@ function victoria(){
 		} else
 		//456
 		if (celda4[1] === 'X' && celda5[1] === 'X' && celda6[1] === 'X') {
-			  winX();
+			winX();
 			return true;
 		} else if (celda4[1] === 'O' && celda5[1] === 'O' && celda6[1] === 'O'){
 			winO();
@@ -410,7 +412,7 @@ function victoria(){
 		} else
 		//789
 		if (celda7[1] === 'X' && celda8[1] === 'X' && celda9[1] === 'X') {
-			  winX();
+			winX();
 			return true;
 		} else if (celda7[1] === 'O' && celda8[1] === 'O' && celda9[1] === 'O'){
 			winO();
@@ -418,7 +420,7 @@ function victoria(){
 		} else
 		//147
 		if (celda1[1] === 'X' && celda4[1] === 'X' && celda7[1] === 'X') {
-			  winX();
+			winX();
 			return true;
 		} else if (celda1[1] === 'O' && celda4[1] === 'O' && celda7[1] === 'O'){
 			winO();
@@ -426,7 +428,7 @@ function victoria(){
 		} else
 		//258
 		if (celda2[1] === 'X' && celda5[1] === 'X' && celda8[1] === 'X') {
-			  winX();
+			winX();
 			return true;
 		} else if (celda2[1] === 'O' && celda5[1] === 'O' && celda8[1] === 'O'){
 			winO();
@@ -434,7 +436,7 @@ function victoria(){
 		} else
 		//369
 		if (celda3[1] === 'X' && celda6[1] === 'X' && celda9[1] === 'X') {
-			  winX();
+			winX();
 			return true;
 		} else if(celda3[1] === 'O' && celda6[1] === 'O' && celda9[1] === 'O'){
 			winO();
@@ -450,7 +452,7 @@ function victoria(){
 		} else
 		//357
 		if (celda3[1] === 'X' && celda5[1] === 'X' && celda7[1] === 'X') {
-			  winX();
+			winX();
 			return true;
 		} else if (celda3[1] === 'O' && celda5[1] === 'O' && celda7[1] === 'O'){
 			winO();
