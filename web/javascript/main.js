@@ -79,7 +79,7 @@ function config(){
 var canvas = document.getElementById("canvas");
 var c = canvas.getContext("2d");
 c.canvas.width  = window.innerWidth*0.82;
-c.canvas.height = window.innerHeight*0.82;
+c.canvas.height = window.innerWidth*0.82;
 var click = canvas.getBoundingClientRect();
 
 var lado = canvas.width;
@@ -100,7 +100,6 @@ function resetCounter(){
     p1Score = 0;
     p2Score = 0;
     reiniciaWaiter();
-    alert("Reiniciado con exito!")
 }
 //IA definition
 var player2IsIA = (localStorage.getItem("isIA") === 'true');
@@ -317,6 +316,7 @@ canvas.addEventListener("click", function(e){
 		if (victoria() !== true){
 			iaPlay();
 			move++;
+			victoria();
 		}
 	}
 	move++;

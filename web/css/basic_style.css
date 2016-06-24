@@ -70,9 +70,6 @@ footer{
 article, footer, aside{
     text-align: center;
 }
-align {
-
-}
 
 /* Menu */
 a {
@@ -87,7 +84,26 @@ nav a {
 .right {
    border-radius: 0px 50px 0px 50px;
 }
+/* Animations,transitions,transformations */
+nav a{
+    transition: width 0.5s, height 0.5s, transform 0.5s;
+}
+nav a:hover {
+    transform: rotate(180deg);
+    border-color:orange;
+}
+nav p {
+    transition: width 0.5s, height 0.5s, transform 0.5s;
+    color: #e74c3c;
+}
+nav p:hover {
+    transform: rotate(-180deg);
+}
 
+form:hover, td:hover, tr:hover, section:hover, fieldset:hover {
+    transition: width 0.5s, height 0.5s, transform 0.5s;
+    border-color:orange;
+}
 /* Tables */
 table, td, th, tr {
     border: 1px solid #2980b9;
@@ -198,11 +214,6 @@ header, section, footer, aside, nav, main, article, figure {
          height:20px;
      }
 
-     /* tables */
-     /*.hide{
-        display:none;
-     }*/
-
     /* Transforms */
     nav a:hover{
         -moz-transform: none !important;
@@ -284,6 +295,11 @@ header, section, footer, aside, nav, main, article, figure {
     }
 }
 
+/* frames */
+iframe {
+    border:0px;
+    height:400px;
+}
 /* Fonts */
 @font-face {
     font-family: CheapFire;
@@ -305,31 +321,4 @@ header, section, footer, aside, nav, main, article, figure {
 @font-face {
     font-family: Orion;
     src: url(fonts/OrionPax.ttf);
-}
-
-/* Animations,transitions,transformations */
-nav a{
-    transition: width 0.5s, height 0.5s, transform 0.5s;
-}
-nav a:hover {
-    transform: rotate(180deg);
-    border-color:orange;
-}
-nav p {
-    transition: width 0.5s, height 0.5s, transform 0.5s;
-    color: #e74c3c;
-}
-nav p:hover {
-    transform: rotate(-180deg);
-}
-
-form:hover, td:hover, tr:hover, section:hover, fieldset:hover {
-    transition: width 0.5s, height 0.5s, transform 0.5s;
-    border-color:orange;
-}
-
-/* frames */
-iframe {
-    border:0px;
-    height:400px;
 }

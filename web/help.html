@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es" manifest="demo.appcache">
-<LINK href="basic_style.css" rel="stylesheet" type="text/css">
+<LINK href="css/basic_style.css" rel="stylesheet" type="text/css">
 <title>Ayuda</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,7 @@
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 
-<!-- Navegador principal // añadir lateral¿?-->
+<!-- Navegador principal-->
 <body class="col-10">
 <header class="row">
     <nav id="menu_principal">
@@ -18,7 +18,7 @@
         <a href="game.html" class="col-2 move top"><p>Juega</p></a>
         <a href="contact.html" class="col-2 topr"><p>Contacto</p></a>
         <a href="options.html" class="col-2 right"><p>Opciones</p></a>
-        <a href="ranking.html" class="col-2 right move bot"><p>Ranking</p></a>
+        <a href="juego2.html" class="col-2 right move bot"><p>Juego extra</p></a>
         <a href="mapa.html" class="col-2 right rmb"><p>Mapa</p></a>
     </nav>
 </header>
@@ -29,12 +29,11 @@
         <p>Objetivo: Conseguir hacer tres figuras en raya, siendo valido en horizontal, vertical y diagonal.
             <br>
             Tienes un movimiento por turno, siendo que este puede colocarse en cualquier lugar vacio, sin ningun tipo de restricción.
+            <br>
+            Entre partida y partida hay que esperar dos segundos a que termine de cargarse el reinicio. Si pulsas el boton espera esos 2 segundos también.
         </p>
     </section>
 
-    <!--autohide	This parameter indicates whether the video controls will automatically hide after a video begins playing.
-     This parameter has been deprecated for HTML5 players,
-     which display or hide the video progress bar and player controls automatically (autohide=1). -->
     <iframe class="col-12"
             src="https://www.youtube.com/embed/9rBUImB0E9E?playlist=Oi-2-0PeEmA,AMx7LQNHJCg,EoN_vhZjrjg,I6I8QkGZt-8&amp;autohide=0" allowfullscreen>
     </iframe>

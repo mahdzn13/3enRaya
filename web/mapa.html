@@ -1,24 +1,17 @@
 <!DOCTYPE html>
 <html lang="es" manifest="demo.appcache">
-<LINK href="basic_style.css" rel="stylesheet" type="text/css">
+<LINK href="css/basic_style.css" rel="stylesheet" type="text/css">
 <title>Mapa</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!-- //for-mobile-apps -->
-<link href='//fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
-<link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+
 
 <!-- Entender HTML5 IE-->
 <!--[if lt IE 9]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 
-<!-- Navegador principal // añadir lateral¿?-->
+<!-- Navegador principal -->
 <body class="col-10">
 <header class="row">
     <nav id="menu_principal">
@@ -26,7 +19,7 @@
         <a href="game.html" class="col-2 move top"><p>Juega</p></a>
         <a href="contact.html" class="col-2 topr"><p>Contacto</p></a>
         <a href="options.html" class="col-2 right"><p>Opciones</p></a>
-        <a href="ranking.html" class="col-2 right move bot"><p>Ranking</p></a>
+        <a href="juego2.html" class="col-2 right move bot"><p>Juego extra</p></a>
         <a href="mapa.html" class="col-2 right rmb"><p>Mapa</p></a>
     </nav>
 </header>
@@ -37,7 +30,7 @@
 
     <div id="mapa" class="col-12">
         <div id="map">
-            <script src="main.js"></script>
+            <script src="javascript/main.js"></script>
             <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABBVcpz5nvK0vP-SKSpx6Ktgnyd86quq8&callback=initMap" async defer></script>
         </div>
     </div>
